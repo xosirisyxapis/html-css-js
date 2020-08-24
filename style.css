@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+	font-family: Gafata;
+	text-align: center;
+}
+@font-face {
+    font-family: 'Gafata';
+    src: url('font/Gafata-Regular.woff2') format('woff2'), url('font/Gafata-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	font-size: 30px;
+}
+

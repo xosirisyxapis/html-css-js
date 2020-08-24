@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	font-family: Gafata;
+	text-align: center;
+	font-size: 1.5em;
+}
+@font-face {
+    font-family: 'Gafata';
+    src: url('../font/Gafata-Regular.woff2') format('woff2'), url('../font/Gafata-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.back-btn {
+	font-size: 34px;
+    width: 53px;
+    height: 46px;
+    margin: 5px;
+    position: absolute;
+    top: 0px;
+    color: #fff;
+    padding-top: 10px;
+    background: #848484;
+}
+.box {
+	width: 100%;
+	margin: auto;
+	height: 400px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 50px;
+}
+
+/* Grid 12 columnas */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.span-12 {
+    grid-column: 1 / span 12;
+}
+
+.span-6 {
+    grid-column: 1 / span 6;
+}
+
+.span-4 {
+    grid-column: 4 / span 4;
+}
+
+.span-2 {
+    grid-column: 3 / span 2;
+}
+.section {
+    display: grid;
+    place-items: center;
+    text-align: center
+}
+
+/* Centrado */
+.centered {
+	display: grid;
+	place-items: center;
+}
+.center-item {
+	border-radius: 10px;
+	padding: 30px;
+}
+
+/* Colores */
+.white {
+	background: #fff;
+	/*border: 1px solid #c1c1c1;*/
+}
+.green {
+	background-color: #d4f2c4;
+    border: 1px solid #b9dba9;
+}
+.coral {
+	background: #f7c8ab;
+	border: 1px solid #feb180;
+}
+.blue {
+	background: #a9e2ea;
+	border: 1px solid #81cfd9;
+}
+.yellow {
+	background: #fee8b4;
+	border: 1px solid #ffd675;
+}
