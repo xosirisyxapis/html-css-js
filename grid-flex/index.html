@@ -3,24 +3,117 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="./transeunte-8bits.ico">
-	<link rel="stylesheet" type="text/css" href="./style.css" media="screen"/>
+	<link rel="icon" href="../favicon.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Gafata&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./style.css" media="screen"/>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<title>Grid-Flex</title>
 </head>
 <body>
 	<a href="../" title="Atrás"><div class="back-btn"><i class="fas fa-angle-left"></i></div></a>
 	<h1>grid-flex</h1>
+	<h2>Layout</h2>
+	<style>
+		.es1.parent {
+			display: grid;
+			grid-template: auto 1fr auto / auto 1fr auto;
+		}
+		.es1 header {
+			padding: 2rem;
+			grid-column: 1 / 4;
+		}
+
+		.es1 .left-side {
+			grid-column: 1 / 2;
+		}
+
+		.es1 main {
+			grid-column: 2 / 3;
+		}
+
+		.es1 .right-side {
+			grid-column: 3 / 4;
+		}
+
+		.es1 footer {
+			grid-column: 1 / 4;
+		}
+	</style>
+	<div class="wrap">
+		<div class="box white es1 parent">
+			<header class="pink section">Header</header>
+			<div class="left-side blue section" contenteditable>Left Sidebar</div>
+			<main class="section coral" contenteditable> Main Content</main>
+			<div class="right-side yellow section" contenteditable>Right Sidebar</div>
+			<footer class="green section">Footer</footer>
+		</div>
+	</div>
+
 	<h2>Grid de 12 columnas</h2>
-	<div class="box white parent">
-	    <div class="span-12 green section">Span 12</div>
-	    <div class="span-6 coral section">Span 6</div>
-	    <div class="span-4 blue section">Span 4</div>
-	    <div class="span-2 yellow section">Span 2</div>
+	<style>
+		.es2.parent {
+		    display: grid;
+		    grid-template-columns: repeat(12, 1fr);
+		}
+
+		.es2 .span-12 {
+		    grid-column: 1 / span 12;
+		}
+
+		.es2 .span-6 {
+		    grid-column: 1 / span 6;
+		}
+
+		.es2 .span-4 {
+		    grid-column: 4 / span 4;
+		}
+
+		.es2 .span-2 {
+		    grid-column: 3 / span 2;
+		}
+		.es2 .section {
+		    display: grid;
+		    place-items: center;
+		    text-align: center
+		}
+	</style>
+	<div class="wrap">
+		<div class="box white es2 parent">
+		    <div class="span-12 green section">Span 12</div>
+		    <div class="span-6 coral section">Span 6</div>
+		    <div class="span-4 blue section">Span 4</div>
+		    <div class="span-2 yellow section">Span 2</div>
+		</div>
 	</div>
 	<h2>Centrar elemento</h2>
-	<div class="box white centered">
-		<div class="center-item coral">Hola mundo :)</div>
+	<style>
+		.centered {
+			display: grid;
+			place-items: center;
+		}
+		.center-item {
+			border-radius: 10px;
+			padding: 30px;
+		}
+	</style>
+	<div class="wrap">
+		<div class="box white centered">
+			<div class="center-item coral">Hola mundo :)</div>
+		</div>
 	</div>
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" crossorigin="anonymous"></script>
+	<script>
+		$( function() {
+			$( ".box" ).resizable({
+				"autoHide": true,
+				"maxHeight": 300,
+				"handles": "se"
+			});
+		} );
+  	</script>
 </body>
 </html>

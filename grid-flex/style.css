@@ -4,13 +4,6 @@ body {
 	text-align: center;
 	font-size: 1.5em;
 }
-@font-face {
-    font-family: 'Gafata';
-    src: url('../font/Gafata-Regular.woff2') format('woff2'), url('../font/Gafata-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 .back-btn {
 	font-size: 34px;
     width: 53px;
@@ -23,48 +16,18 @@ body {
     background: #848484;
 }
 .box {
-	width: 100%;
+	width: 60%;
 	margin: auto;
-	height: 400px;
+	height: 300px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-bottom: 50px;
+}
+.wrap {
+    height: 300px;
+    margin-bottom: 50px;
 }
 
-/* Grid 12 columnas */
-.parent {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
-.span-12 {
-    grid-column: 1 / span 12;
-}
-
-.span-6 {
-    grid-column: 1 / span 6;
-}
-
-.span-4 {
-    grid-column: 4 / span 4;
-}
-
-.span-2 {
-    grid-column: 3 / span 2;
-}
-.section {
-    display: grid;
-    place-items: center;
-    text-align: center
-}
-
-/* Centrado */
-.centered {
-	display: grid;
-	place-items: center;
-}
-.center-item {
-	border-radius: 10px;
-	padding: 30px;
+.ui-draggable, .ui-droppable {
+    background-position: top;
 }
 
 /* Colores */
@@ -87,4 +50,8 @@ body {
 .yellow {
 	background: #fee8b4;
 	border: 1px solid #ffd675;
+}
+.pink {
+    background: #f5e0e9;
+    border: 1px solid #f9bed6;
 }
