@@ -1,20 +1,9 @@
-body {
+/*body {
 	margin: 0;
 	font-family: Gafata;
 	text-align: center;
 	height: 60vh;
-}
-.back-btn {
-	font-size: 34px;
-    width: 53px;
-    height: 46px;
-    margin: 5px;
-    position: absolute;
-    top: 0px;
-    color: #fff;
-    padding-top: 10px;
-    background: #848484;
-}
+}*/
 .content {
 	text-align: left;
 	padding: 20px;
@@ -72,10 +61,4 @@ body {
 
 .form input:focus + .label-name::after, .form input:valid + .label-name::after {
 	transform: translateX(0%);
-}
-
-.source {
-	padding-top: 100px;
-	padding-left: 5px;
-	text-align: left;
 }

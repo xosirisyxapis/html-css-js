@@ -2,10 +2,65 @@ body {
 	margin: 0;
 	font-family: Gafata;
 	text-align: center;
+	font-size: 1.5em;
 }
-.container {
+.back-btn {
+	font-size: 34px;
+    width: 53px;
+    height: 46px;
+    margin: 5px;
+    position: absolute;
+    top: 0px;
+    color: #000;
+    padding-top: 10px;
+}
+.back-btn:hover {
+    color: #fff;
+    background: #cecece;
+}
+.main-container {
 	display: flex;
 	flex-direction: column;
 	font-size: 30px;
+	width: 300px;
+	margin: auto;
+	text-align: left;
 }
 
+.source {
+	text-align: left;
+	padding: 20px;
+}
+.source::before {
+	content: "Fuente:";
+	margin-right: 10px;
+}
+
+/* Colores */
+.white {
+	background: #fff;
+}
+.green {
+	background-color: #d4f2c4;
+    border: 1px solid #b9dba9;
+}
+.coral {
+	background: #f7c8ab;
+	border: 1px solid #feb180;
+}
+.blue {
+	background: #a9e2ea;
+	border: 1px solid #81cfd9;
+}
+.yellow {
+	background: #fee8b4;
+	border: 1px solid #ffd675;
+}
+.pink {
+    background: #f5e0e9;
+    border: 1px solid #f9bed6;
+}
+.purple {
+    background: #dfd3e4;
+    border: 1px solid #d6b6e2;
+}
