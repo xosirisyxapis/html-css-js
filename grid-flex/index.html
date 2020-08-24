@@ -13,6 +13,7 @@
 <body>
 	<a href="../" title="Atrás"><div class="back-btn"><i class="fas fa-angle-left"></i></div></a>
 	<h1>grid-flex</h1>
+
 	<h2>Layout</h2>
 	<style>
 		.es1.parent {
@@ -86,23 +87,126 @@
 		    <div class="span-2 yellow section">Span 2</div>
 		</div>
 	</div>
+
+	<h2>Pancake Stack</h2>
+	<style>
+		.es3.parent {
+			display: grid;
+			grid-template-rows: auto 1fr auto;
+		}
+	</style>
+	<div class="wrap">
+		<div class="box white es3 parent">
+			<header class="blue section" contenteditable>Header</header>
+    		<main class="coral section" contenteditable>Main</main>
+    		<footer class="purple section" contenteditable>Footer Content</footer>
+		</div>
+	</div>
+
+	<h2>The Deconstructed Pancake</h2>
+	<style>
+		.es4.parent {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			}
+
+		.es4 .card {
+			flex: 1 1 150px; /*  Stretching: */
+			flex: 0 1 150px; /*  No stretching: */
+			margin: 5px;
+		}
+	</style>
+	<div class="wrap">
+		<div class="box white es4 parent">
+			<div class="card green">1</div>
+		    <div class="card green">2</div>
+		    <div class="card green">3</div>
+		</div>
+	</div>
+
+	<h2>RAM (Repeat, Auto, Minmax)</h2>
+	<style>
+		.es5.parent {
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		}
+		.es5 .card {
+			border-radius: 10px;
+		}
+	</style>
+	<div class="wrap">
+		<div class="box white es5 parent">
+			<div class="card pink">1</div>
+		    <div class="card purple">2</div>
+		    <div class="card blue">3</div>
+		    <div class="card green">4</div>
+		</div>
+	</div>
+
 	<h2>Centrar elemento</h2>
 	<style>
-		.centered {
+		.es6.centered {
 			display: grid;
 			place-items: center;
 		}
-		.center-item {
+		.es6 .center-item {
 			border-radius: 10px;
 			padding: 30px;
 		}
 	</style>
 	<div class="wrap">
-		<div class="box white centered">
+		<div class="box white es6 centered">
 			<div class="center-item coral">Hola mundo :)</div>
 		</div>
 	</div>
 
+	<h2>Line up</h2>
+	<style>
+		.es7.parent {
+			height: auto;
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: repeat(3, 1fr);
+			font-size: 15px;
+		}
+
+		.es7 .visual {
+			height: 100px;
+			width: 100%;
+		}
+
+		.es7 .card {
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+			justify-content: space-between;
+		}
+
+		.es7 h3 {
+			margin: 0
+		}
+	</style>
+	<div class="wrap">
+		<div class="box white es7 parent">
+			<div class="card yellow">
+				<h3>Title - Card 1</h3>
+				<p contenteditable>Medium length description with a few more words here.</p>
+				<div class="visual pink"></div>
+			</div>
+			<div class="card yellow">
+				<h3>Title - Card 2</h3>
+				<p contenteditable>Long Description. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+				<div class="visual blue"></div>
+			</div>
+			<div class="card yellow">
+				<h3>Title - Card 3</h3>
+				<p contenteditable>Short Description.</p>
+				<div class="visual green"></div>
+			</div>
+		</div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-1.12.4.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" crossorigin="anonymous"></script>
@@ -111,7 +215,7 @@
 			$( ".box" ).resizable({
 				"autoHide": true,
 				"maxHeight": 300,
-				"handles": "se"
+				"handles": "se,e"
 			});
 		} );
   	</script>
