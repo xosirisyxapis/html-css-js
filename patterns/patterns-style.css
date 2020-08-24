@@ -1,0 +1,220 @@
+body {
+	margin: 0;
+	background-color: #fff;
+	font-family: Gafata;
+	font-size: 26px;
+	text-align: center;
+}
+@font-face {
+    font-family: 'Gafata';
+    src: url('font/Gafata-Regular.woff2') format('woff2'), url('font/Gafata-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+.title {
+	border-bottom: #000 2px solid;
+}
+.title-wrapper {
+	display: inline-block;
+	width: 100%;
+}
+.slidecontainer {
+	width: 100%;
+}
+.button {
+    font-weight: bold;
+    font-family: gafata;
+    font-size: 23px;
+    display: inline;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 40px;
+    width: 135px;
+    cursor: pointer;
+    margin:0 20px 0 -135px;
+    float: right;
+}
+.button:hover {
+    background: #eee;
+    border-color: #000;
+}
+.button:focus {
+    outline: none;
+}
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 30px;
+}
+
+.item-row {
+    grid-column: 1 / 3;
+}
+
+/* Slider */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 25px;
+	background: #ccc;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+	margin: 0;
+}
+.slider:hover {
+	opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	background: #000;
+	cursor: pointer;
+}
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #000;
+	cursor: pointer;
+}
+.slider:disabled::-webkit-slider-thumb {
+	background: #a7a7a7;
+}
+.slider:disabled::-moz-range-thumb {
+	background: #a7a7a7;
+}
+
+/* Radio button */
+input[type="radio"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 3px solid #000;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 0 5px -4px 50px;
+    cursor: pointer;
+}
+label {
+	cursor: pointer;
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  background-color: #000;
+}
+input[type="radio" i]:focus {
+    outline: none;
+}
+
+/* Checkbox */
+.checkbox {
+    width: 100%;
+    margin: 0px auto 15px;
+    margin-left: -55px;
+    position: relative;
+    display: block;
+}
+
+.checkbox input[type="checkbox"] {
+    width: auto;
+    opacity: 0.00000001;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+}
+.checkbox label {
+    position: relative;
+}
+.checkbox label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.28s ease;
+    border-radius: 3px;
+    border: 2px solid #000;
+}
+.checkbox label:after {
+  	content: '';
+    display: inline;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    -webkit-transform: rotate(-45deg) scale(0);
+    transform: rotate(-45deg) scale(0);
+    transition: transform ease 0.25s;
+    will-change: transform;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+.checkbox input[type="checkbox"]:checked ~ label::before {
+    color: #000;
+}
+
+.checkbox input[type="checkbox"]:checked ~ label::after {
+    -webkit-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+}
+
+.checkbox label {
+    min-height: 34px;
+    display: inline;
+    padding-left: 40px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    vertical-align: sub;
+}
+.checkbox label span {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: 0;
+}

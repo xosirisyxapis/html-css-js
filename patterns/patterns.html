@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patrones</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gafata&display=swap">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+			integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+			crossorigin="anonymous">
+	<link rel="icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="./patterns-style.css" media="screen"/>
+</head>
+<body>
+	<a href="../" title="Atrás"><div class="back-btn"><i class="fa fa-angle-left"></i></div></a>
+	<div class="container">
+		<div class="grid-container">
+			<div class="item-row">
+				<div class="title-wrapper">
+					<div class="title">
+						<h1>Patrones</h1>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="slidecontainer">
+					<p title="Este valor determina la rotación entre cada figura">
+						<b>Rotación:
+							<span id="rot_value"></span>
+						</b>
+					</p>
+					<div class="text_space"></div>
+					<div class="checkbox">
+						<input type="checkbox" id="rot_align" />
+						<label for="rot_align"><span>Alineado</span></label>
+					</div>
+					<input type="range" min="0" max="20" value="5" class="slider" id="rotation_slider">
+				</div>
+			</div>
+			<div>
+				<div class="slidecontainer">
+					<p title="Este valor determina el tamaño de las figuras">
+						<b>Tamaño:
+							<span id="size_value"></span>
+						</b>
+					</p>
+					<div class="text_space"></div>
+					<div class="checkbox">
+						<input type="checkbox" id="size_random" />
+						<label for="size_random"><span>Aleatorio</span></label>
+					</div>
+					<input type="range" min="5" max="13" value="10" class="slider" id="size_slider">
+				</div>
+			</div>
+			<div class="item-row">
+				<div style="margin-bottom: 20px;">
+					<p title="Este valor determina la forma de las figuras"><b>Tipo</b></p>
+					<div class="text_space"></div>
+					<input type="radio" name="type_param" onchange="handleChangeRadio();" id="rect" value="rect" checked />
+					<label for="rect">Rectángulo</label>
+					<input type="radio" name="type_param" onchange="handleChangeRadio();" id="tri" value="tri"/>
+					<label for="tri">Triángulo</label>
+					<input type="radio" name="type_param" onchange="handleChangeRadio();" id="circ" value="circ"/>
+					<label for="circ">Elipse</label>
+					<button onclick="action_pause()" id="btn-pause" class="button">Pausar</button>
+				</div>
+			</div>
+		</div>
+		<div id="image-div"></div>
+		<div id="canvascontainer">
+			<canvas class="myCanvas" style="display: block;">
+				<p>Animación de patrones.</p>
+			</canvas>
+		</div>
+	</div>
+	<script type="text/javascript" src="./pattern.js"></script>
+</body>
+</html>
