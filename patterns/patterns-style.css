@@ -29,13 +29,6 @@ p {
 	max-width: 1200px;
 	margin: auto;
 }
-.title {
-	border-bottom: #000 2px solid;
-}
-.title-wrapper {
-	display: inline-block;
-	width: 100%;
-}
 .slidecontainer {
 	width: 100%;
 }
