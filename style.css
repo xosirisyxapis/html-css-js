@@ -38,12 +38,9 @@ body {
 .main-container ul li:hover {
   	border-left: 5px solid #f3f3f3;
 }
-a {
+a.nocolor {
 	color: #000;
 	text-decoration: none;
-}
-a:hover {
-
 }
 .source {
 	text-align: left;
