@@ -97,24 +97,28 @@
 	position: absolute;
 	left: -2.5em;
 	top: .5em;
-	/*background: #ccc;*/
 	width: 2em;
 	height: 2em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	border: 3px solid #666;
-	color: #666;
+	border: 3px solid red;
+	color: #000;
 	box-sizing: border-box;
 }
 
 /* Títulos con estilo */
+.h1-container {
+	overflow: hidden;
+}
 .heading-style {
 	position: relative;
   	display: inline-block;
 }
 .heading-style::before, .heading-style::after {
+	padding: 0;
+	margin: 0;
 	content: '';
 	height: 100%;
 	display: block;
@@ -125,10 +129,9 @@
 	width: 100vw;
 	left: 50%;
 	transform: translateX(-50%);
-z-index: -2;
+	z-index: -2;
 }
 .heading-style::after {
-	height: 100%;
 	background: #fff;
 	left: -.2em;
 	right: -.2em;
