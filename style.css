@@ -4,19 +4,26 @@ body {
 	text-align: center;
 	font-size: 1.5em;
 }
-.back-btn {
+.btn-back, .btn-top {
 	font-size: 34px;
     width: 53px;
     height: 46px;
     margin: 5px;
-    position: absolute;
-    top: 0px;
+    position: fixed;
     color: #000;
     padding-top: 10px;
 }
-.back-btn:hover {
+.btn-back {
+    top: 0;
+    left: 0;
+}
+.btn-back:hover, .btn-top:hover {
     color: #fff;
     background: #cecece;
+}
+.btn-top {
+	top: 0;
+	left: 53px;
 }
 .main-container {
 	display: flex;
