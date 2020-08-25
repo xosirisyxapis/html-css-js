@@ -128,7 +128,7 @@
 z-index: -2;
 }
 .heading-style::after {
-	height: 101%;
+	height: 100%;
 	background: #fff;
 	left: -.2em;
 	right: -.2em;
@@ -142,4 +142,72 @@ z-index: -2;
 }
 .heading-style.h1-yellow::before {
 	background-color: yellow;
+}
+.heading-style.h1-black::before {
+	background-color: black;
+}
+
+/* Tarjetas */
+.card-container {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+.card {
+	position: relative;
+	margin: 1em;
+	background: #333333;
+}
+.card::before, .card::after {
+    content: '';
+    position: absolute;
+    top: 1.5em;
+    bottom: 1.5em;
+    left: 1.5em;
+    right: 1.5em;
+    opacity: 1;
+    transition: transform ease-out 250ms;
+  }
+.card::before {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	transform: scale(0,1);
+}
+.card::after {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	transform: scale(1,0);
+}
+.card:hover::before {
+	transform: scale(1.1, 1);
+}
+
+.card:hover::after {
+	transform: scale(1, 1.1);
+}
+.card-img {
+	max-width: 100%;
+	display: block;
+	transition: opacity ease-out 250ms;
+}
+.card:hover .card-img {
+    opacity: .4;
+}
+.card-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	opacity: 0;
+	transition: opacity ease-out 250ms;
+}
+.card:hover .card-text {
+	opacity: 1;
+}
+.card-title {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 0;
 }
