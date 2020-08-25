@@ -1,3 +1,4 @@
+/* Tooltip */
 .content {
 	width: 70%;
 	margin: auto;
@@ -31,6 +32,7 @@
 	bottom: 100%;
 }
 
+/* Links con íconos */
 .link-icons {
 	text-align: left;
 	width: 300px;
@@ -70,6 +72,7 @@
 	content: ' \f1c5';
 }
 
+/* Contadores */
 .counters {
 	counter-reset: counter-section;
 }
@@ -104,4 +107,39 @@
 	border: 3px solid #666;
 	color: #666;
 	box-sizing: border-box;
+}
+
+/* Títulos con estilo */
+.heading-style {
+	position: relative;
+  	display: inline-block;
+}
+.heading-style::before, .heading-style::after {
+	content: '';
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+}
+.heading-style::before {
+	width: 100vw;
+	left: 50%;
+	transform: translateX(-50%);
+z-index: -2;
+}
+.heading-style::after {
+	height: 101%;
+	background: #fff;
+	left: -.2em;
+	right: -.2em;
+	z-index: -1;
+}
+.heading-style.h1-red::before {
+	background-color: red;
+}
+.heading-style.h1-orange::before {
+	background-color: orange;
+}
+.heading-style.h1-yellow::before {
+	background-color: yellow;
 }
