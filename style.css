@@ -1,8 +1,12 @@
+html {
+	--main-color: black;
+}
 body {
 	margin: 0;
 	font-family: Gafata;
 	text-align: center;
 	font-size: 1.5em;
+	color: var(--main-color);
 }
 .btn-back, .btn-top {
 	font-size: 34px;
@@ -39,14 +43,14 @@ body {
 	padding: 10px 20px;
 }
 .main-container ul li {
-  	border-left: 5px solid #000;
+  	border-left: 5px solid var(--main-color);
   	padding-left: 20px;
 }
 .main-container ul li:hover {
   	border-left: 5px solid #f3f3f3;
 }
 a.nocolor {
-	color: #000;
+	color: var(--main-color);
 	text-decoration: none;
 }
 .source {
