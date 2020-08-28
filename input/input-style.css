@@ -61,7 +61,6 @@
 	display: flex;
 	flex-flow: row wrap;
 	max-width: 1200px;
-	box-shadow: 0 0 30px 0 rgba(0,0,0,.15);
 	padding: 48px;
 }
 .content-2 *, .content-2 ::before, .content-2 ::after {
@@ -81,6 +80,7 @@
 	padding: 19px 66px;
 	position: relative;
 	z-index: 1;
+	width: 250px;
 }
 .button-one {
 	border: solid 1px var(--teal);
@@ -150,4 +150,111 @@
     bottom: 0%;
     left: 0%;
     right: 0%;
+}
+.button-four {
+	border: 1px solid var(--purple);
+	color: var(--purple);
+	outline: 1px solid var(--purple);
+	outline-offset: -1px;
+}
+.button-four:hover {
+    outline-offset: -4px;
+}
+.button-five {
+	border: 1px solid var(--yellow);
+	color: var(--yellow);
+	outline: 1px solid var(--yellow);
+	outline-offset: -1px;
+}
+.button-five:hover {
+    outline: 1px solid var(--yellow);
+    outline-offset: 3px;
+}
+.button-six {
+  border: 1px solid var(--pink);
+  color: var(--pink);
+  outline: 1px solid var(--pink);
+  outline-offset: -1px;
+}
+
+.button-six:hover {
+    outline: 5px solid var(--pink);
+    outline-offset: -5px;
+}
+.button-seven {
+	border: var(--blue);
+	background: var(--blue);
+	color: var(--white);
+}
+.button-seven::before,
+.button-seven::after {
+    content: '';
+    display: block;
+    background: white;
+    position: absolute;
+}
+.button-seven::before,
+.button-seven::after {
+    height: 2px;
+}
+.button-seven::before {
+    top: 0;
+    left: 0;
+    right: 100%;
+}
+.button-seven::after {
+    bottom: 0;
+    right: 0;
+    left: 100%;
+}
+.button-seven:hover::before {
+    right: 0;
+}
+.button-seven:hover::after {
+    left: 0;
+}
+.button-eight {
+	border: 1px solid var(--green);
+	background: var(--green);
+	outline: 2px solid var(--white);
+}
+.button-eight:hover {
+    outline-offset: -4px;
+}
+.button-nine {
+	border: 1px solid var(--brightteal);
+	background: var(--brightteal);
+	overflow: hidden;
+}
+.button-nine::after {
+    background: #aeffe0;
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 500%;
+    top: -270%;
+    left: -35%;
+    /*left: 140%;*/
+    transform: rotate(45deg);
+}
+.button-nine:hover::after {
+    left: 140%;
+}
+.button-ten{
+	background: var(--purple);
+	color: var(--white);
+	transition: all cubic-bezier(0.85, 0.17, 0.48, 1.63) 300ms;
+	outline: 2px solid var(--white);
+}
+.button-ten:hover{
+    transform: scale(1.15);
+    outline-offset: -8px;
+}
+.button-eleven {
+	background: var(--orange);
+	color: var(--white);
+	transition: all linear 400ms;
+}
+.button-eleven:hover {
+    transform: rotate(5deg);
 }
