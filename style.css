@@ -1,5 +1,15 @@
 html {
 	--main-color: black;
+	--white: #FFF;
+	--teal: rgb(117, 196, 192);
+	--orange: rgb(255, 168, 17);
+	--red: rgb(209, 10, 50);
+	--purple: rgb(156, 17, 255);
+	--yellow: rgb(232, 180, 9);
+	--pink: rgb(241, 36, 244);
+	--blue: rgb(36, 99, 244);
+	--green: rgb(36, 244, 116);
+	--brightteal: rgb(66, 244, 176);
 }
 body {
 	margin: 0;
